@@ -20,7 +20,8 @@ router
   .route("/:trainingId")
   .get(trainingController.getSingleTraining)
   .patch(trainingController.updateTraining)
-  .delete(trainingController.deleteTraining);
+  .delete(trainingController.deleteTraining)
+  .post(trainingController.addExercises);
 
 router.route("/name/:trainingName").get(trainingController.getTrainingByName);
 
