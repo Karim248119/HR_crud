@@ -22,4 +22,6 @@ router
   .patch(trainingController.updateTraining)
   .delete(trainingController.deleteTraining);
 
+router.route("/name/:trainingName").get(trainingController.getTrainingByName);
+
 module.exports = router;
