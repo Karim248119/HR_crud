@@ -17,8 +17,8 @@ const trainingSchema = new mongoose.Schema({
     {
       name: { type: String, required: true },
       img: { type: String, required: false },
-      equipment: { type: [String], required: true },
-      primaryMuscles: { type: [String], required: true },
+      equipment: { type: Array, required: true },
+      primaryMuscles: { type: Array, required: true },
     },
   ],
 });
