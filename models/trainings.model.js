@@ -13,10 +13,14 @@ const trainingSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  trainings: {
-    type: Array,
-    required: false,
-  },
+  trainings: [
+    {
+      name: { type: String, required: true },
+      img: { type: String, required: false },
+      equipment: { type: [String], required: true },
+      primaryMuscles: { type: [String], required: true },
+    },
+  ],
 });
 
 module.exports = mongoose.model("Training", trainingSchema);

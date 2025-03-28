@@ -130,7 +130,7 @@ const addExercises = async (req, res) => {
     if (!training) {
       return res.status(400).send({ status: FAIL, data: { training: null } });
     }
-    training.trainings.push(req.body);
+    training.trainings.push(...req.body);
     await training.save();
     res.status(201).json(training);
   } catch (err) {
